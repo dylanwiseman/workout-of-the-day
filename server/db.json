@@ -6,14 +6,18 @@
             {
                 "id":1,
                 "name": "triple threat",
-                "description": "Using a barbell, lay on your back on a bench and do 10 skullcrushers, 10 close grip chest press, and 10 overhead tricep extensions. Repeat with a set of 7, then a set of 4. This should kill.",
-                "reps": "10-7-4"
+                "description": "Using a barbell, lay on your back on a bench and do 10 skullcrushers, 10 close grip chest press, and 10 overhead tricep extensions. Repeat with a set of 7, then a set of 4. This should kill."
             },
             {
                 "id":1,
                 "name": "rope pulldown",
-                "description": "Attach a rope grip to the pulleys and pull down on the rope in front of you. Do a set of as many as you can, then turn and pull the rope like you're doin a tricep extension. Repeat 3 sets.",
+                "description": "Attach a rope grip to the pulleys and pull down on the rope in front of you. Do a set of as many as you can, then turn and pull the rope like you're doin a tricep extension. Repeat 3 sets for each.",
                 "reps": "10-10-10"
+            },
+            {
+                "id":3,
+                "name": "tricep dips",
+                "description": "Try to stay vertical, don't lean too far forward. 3 sets."
             }
         ]
     },
@@ -24,14 +28,17 @@
             {
                 "id":1,
                 "name": "dumbell chest press",
-                "description": "Just a bench press, but using dumbells. Do 4 sets, heavy weight.",
-                "reps": "10-10-10"
+                "description": "Just a bench press, but using dumbells. Do 4 sets, heavy weight."
             },
             {
                 "id":2,
                 "name": "dumbell chest fly",
-                "description": "3 sets of as many as you can do with lower weight",
-                "reps": "10-10-10"
+                "description": "3 sets of as many as you can do with lower weight"
+            },
+            {
+                "id":3,
+                "name": "incline dumbell bench press",
+                "description": "Same as the regular version but on an incline"
             }
         ]
     },
@@ -42,14 +49,32 @@
             {
                 "id":1,
                 "name": "bicep curl",
-                "description": 40,
-                "reps": "10-10-10"
+                "description": "A classic, standing, dumbell curl. As many sets as you want."
             },
             {
                 "id":2,
                 "name": "preacher barbell curl",
-                "description": 70,
-                "reps": "10-10-10"
+                "description": "Use a barbell over the preacher equipment, or dumbells over the back of a bench. 3 sets."
+            },
+            {
+                "id":3,
+                "name": "seated lean-back curl",
+                "description": "Sit back on an incline bench, let your arms hang straight down at the bottom of each curl. 3 sets."
+            },
+            {
+                "id":4,
+                "name": "barbell curl",
+                "description": "Same as a regular curl but with a barbell. 3 sets."
+            },
+            {
+                "id":5,
+                "name": "bent over curl",
+                "description": "Bend forward, and curl the dumbell up to your chest, like you're picking it up off the ground. One arm at a time."
+            },
+            {
+                "id":6,
+                "name": "hammer curl",
+                "description": "Hold each dumbell like a hammer, do a curl. Start heavy weights, do as many as you can, then drop weight til your arms can't go on."
             }
         ]
     },
@@ -60,14 +85,27 @@
             {
                 "id":1,
                 "name": "seated row",
-                "description": 140,
-                "reps": "10-10-10"
+                "description": "Start heavy, pull back like you're rowing. 4 sets."
             },
             {
                 "id":2,
                 "name": "lat pulldown",
-                "description": 160,
-                "reps": "10-10-10"
+                "description": "Start at your body weight, do 1 set wide grip, one set middle, one set close grip. Lower the weight and repeat 2 more cycles (9 sets total)."
+            },
+            {
+                "id":3,
+                "name": "bent over back fly",
+                "description": "Use light weights, bend forward at the waist, let your arms hang, then spread your arms like you're a big eagle. 3 sets."
+            },
+            {
+                "id":4,
+                "name": "pull-ups",
+                "description": "Wide grip, middle grip, close grip, repeat."
+            },
+            {
+                "id":5,
+                "name": "lawn-mower pulls",
+                "description": "One knee on the bench, the other leg out for stability. One hand on the bench, the other pulling the weight up towards your torso. 3 sets."
             }
         ]
     },
@@ -78,14 +116,27 @@
             {
                 "id":1,
                 "name": "shoulder dumbell press",
-                "description": 55,
-                "reps": "10-10-10"
+                "description": "Sitting in a chair, press over your head. 4 sets."
             },
             {
                 "id":2,
                 "name": "plate raises",
-                "description": 10,
-                "reps": "12-12-12"
+                "description": "Take two 10 plates. Keeping arms straight, raise them to either side, all the way up over your head, then lower back down. 3 sets."
+            },
+            {
+                "id":3,
+                "name": "shoulder flys",
+                "description": "Use light weights. ELbows at 45 degrees, hold like ski-poles, then do chicken wings, then hands in the air, then elbows together. Reverse. 3 sets."
+            },
+            {
+                "id":4,
+                "name": "standing row",
+                "description": "Row with a barbell, standing straight up. 3 sets."
+            },
+            {
+                "id":5,
+                "name": "shrugs",
+                "description": "Grab as heavy of dumbells as you can hold. Shrug. 3 sets."
             }
         ]
     },
@@ -96,14 +147,37 @@
             {
                 "id":1,
                 "name": "ball plank",
-                "description": 0,
-                "reps": "3 minutes"
+                "description": "Plank with your elbows on an exercise ball. Try for three minutes."
             },
             {
                 "id":2,
                 "name": "crunches",
-                "description": 0,
-                "reps": "2 minutes"
+                "description": "Regular crunches. Only your shoulders need to come off the matt. Keep you legs at 45 degrees. 2 minutes."
+            },
+            {
+                "id":3,
+                "name": "reverse crunches",
+                "description": "Crunches, but raising your butt instead of your shoulders. 2 minutes."
+            },
+            {
+                "id":4,
+                "name": "flutter kicks",
+                "description": "Like yoshi. 1 minute."
+            },
+            {
+                "id":5,
+                "name": "scissor kicks",
+                "description": "Cross those legs in the air. 1 minute."
+            },
+            {
+                "id":6,
+                "name": "russian twists",
+                "description": "Use a weight that isn't too heavy, stay balanced on your butt, legs up, twist back and forth."
+            },
+            {
+                "id":8,
+                "name": "the crucifix",
+                "description": "Find a decline bench. Hold a weighted bar behind your head like you're using it for a squat. Curl up. 3 sets of 12."
             }
         ]
     },
@@ -114,14 +188,22 @@
             {
                 "id":1,
                 "name": "back squat",
-                "description": 300,
-                "reps": "10-6-4-2"
+                "description": "Keep that butt out, core tight, back straight. 4 sets."
             },
             {
                 "id":2,
                 "name": "deadlift",
-                "description": 275,
-                "reps": "10-6-4-2"
+                "description": "Back straight, core tight. 4 sets."
+            },
+            {
+                "id":3,
+                "name": "calf raises",
+                "description": "On the leg press machine. 4 sets of 25."
+            },
+            {
+                "id":4,
+                "name": "IT band raises",
+                "description": "Lay on one side. 30 sec high knees, 30 sec butt kicks, 30 seconds little circles, 30 seconds big circles. Switch sides."
             }
         ]
     },
@@ -154,6 +236,16 @@
                 "id":2,
                 "name": "medicine ball smash",
                 "description": "Lift a medicine ball high over your head and throw it straight down at the ground as hard as you can. 3 sets of 15."
+            },
+            {
+                "id":3,
+                "name": "medicine ball throw",
+                "description": "Throw the medicine ball up as high as you can against the wall. Let it drop and pick it up. 3 sets of 15."
+            },
+            {
+                "id":4,
+                "name": "medicine ball leap",
+                "description": "Hold the medicine ball close to your chest, leap as far as you can with it for 6 jumps, then 6 jumps back. 3 sets."
             }
         ]
     }

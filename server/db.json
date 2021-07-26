@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "type": "triceps",
+        "workouts": [
+            {
+                "id":1,
+                "name": "triple threat",
+                "description": "Using a barbell, lay on your back on a bench and do 10 skullcrushers, 10 close grip chest press, and 10 overhead tricep extensions. Repeat with a set of 7, then a set of 4. This should kill.",
+                "reps": "10-7-4"
+            },
+            {
+                "id":1,
+                "name": "rope pulldown",
+                "description": "Attach a rope grip to the pulleys and pull down on the rope in front of you. Do a set of as many as you can, then turn and pull the rope like you're doin a tricep extension. Repeat 3 sets.",
+                "reps": "10-10-10"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "chest",
+        "workouts": [
+            {
+                "id":1,
+                "name": "dumbell chest press",
+                "description": "Just a bench press, but using dumbells. Do 4 sets, heavy weight.",
+                "reps": "10-10-10"
+            },
+            {
+                "id":2,
+                "name": "dumbell chest fly",
+                "description": "3 sets of as many as you can do with lower weight",
+                "reps": "10-10-10"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "biceps",
+        "workouts": [
+            {
+                "id":1,
+                "name": "bicep curl",
+                "description": 40,
+                "reps": "10-10-10"
+            },
+            {
+                "id":2,
+                "name": "preacher barbell curl",
+                "description": 70,
+                "reps": "10-10-10"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "type": "back",
+        "workouts": [
+            {
+                "id":1,
+                "name": "seated row",
+                "description": 140,
+                "reps": "10-10-10"
+            },
+            {
+                "id":2,
+                "name": "lat pulldown",
+                "description": 160,
+                "reps": "10-10-10"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "type": "shoulders",
+        "workouts": [
+            {
+                "id":1,
+                "name": "shoulder dumbell press",
+                "description": 55,
+                "reps": "10-10-10"
+            },
+            {
+                "id":2,
+                "name": "plate raises",
+                "description": 10,
+                "reps": "12-12-12"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "type": "core",
+        "workouts": [
+            {
+                "id":1,
+                "name": "ball plank",
+                "description": 0,
+                "reps": "3 minutes"
+            },
+            {
+                "id":2,
+                "name": "crunches",
+                "description": 0,
+                "reps": "2 minutes"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "type": "legs",
+        "workouts": [
+            {
+                "id":1,
+                "name": "back squat",
+                "description": 300,
+                "reps": "10-6-4-2"
+            },
+            {
+                "id":2,
+                "name": "deadlift",
+                "description": 275,
+                "reps": "10-6-4-2"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "type": "cardio",
+        "workouts": [
+            {
+                "id":1,
+                "name": "short run",
+                "description": "1-4 miles, push the pace."
+            },
+            {
+                "id":2,
+                "name": "long run",
+                "description": "5-12 miles, nice and easy."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "type": "plyometrics",
+        "workouts": [
+            {
+                "id":1,
+                "name": "box jumps",
+                "description": "Start low then stack the boxes higher and higher. Do both legs, then one leg at a time."
+            },
+            {
+                "id":2,
+                "name": "medicine ball smash",
+                "description": "Lift a medicine ball high over your head and throw it straight down at the ground as hard as you can. 3 sets of 15."
+            }
+        ]
+    }
+    
+]

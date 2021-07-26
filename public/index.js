@@ -1,9 +1,19 @@
 const baseURL = 'http://localhost:4005/api/'
 const todayBtn = document.getElementById('todaysWorkout')
+const tricepBtn = document.getElementById('triceps-button')
+const bicepBtn = document.getElementById('biceps-button')
+const chestBtn = document.getElementById('chest-button')
+const backBtn = document.getElementById('back-button')
+const legsBtn = document.getElementById('legs-button')
+const coreBtn = document.getElementById('core-button')
+const shouldersBtn = document.getElementById('shoulders-button')
+const cardioBtn = document.getElementById('cardio-button')
+const plyoBtn = document.getElementById('plyo-button')
 
 const getWorkout = (e) => {
     e.preventDefault()
     console.log("clicked!")
+    document.getElementById('big-container').innerHTML = ""
     axios.get(`${baseURL}weights/`)
     .then(res => {
         let workoutContainer = document.createElement('div')
@@ -22,11 +32,12 @@ const getWorkout = (e) => {
             let exercise = document.createElement('div')
             let h4 = document.createElement('h4')
             let description = document.createElement('p')
-            document.body.appendChild(workoutContainer)
+            document.getElementById('big-container').appendChild(workoutContainer)
             workoutContainer.appendChild(exercise)
             exercise.appendChild(h4)
             exercise.appendChild(description)
             h4.addEventListener('click',crossOffWorkout)
+            exercise.classList.add("angled-gradient-div")
             description.textContent = cardio.workouts[num].description
             h4.textContent = cardio.workouts[num].name
         }
@@ -35,11 +46,12 @@ const getWorkout = (e) => {
                 let exercise = document.createElement('div')
                 let h4 = document.createElement('h4')
                 let description = document.createElement('p')
-                document.body.appendChild(workoutContainer)
+                document.getElementById('big-container').appendChild(workoutContainer)
                 workoutContainer.appendChild(exercise)
                 exercise.appendChild(h4)
                 exercise.appendChild(description)
                 h4.addEventListener('click',crossOffWorkout)
+                exercise.classList.add("angled-gradient-div")
                 description.textContent = type.workouts[i].description
                 h4.textContent = type.workouts[i].name
             }
@@ -50,122 +62,25 @@ const getWorkout = (e) => {
             setupContainerCardio(0)
             setupContainer(triceps)
             setupContainer(chest)
-
         } else if (day === 2) {
             setupContainerCardio(0)
             setupContainer(biceps)
             setupContainer(back)
-            // let exercise = document.createElement('div')
-            // let h4 = document.createElement('h4')
-            // let = description = document.createElement('p')
-            // description.textContent = cardio.workouts[0].description
-            // h4.textContent = cardio.workouts[0].name
-            // document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            // exercise.appendChild(description)
-            // for (let i in biceps.workouts) {
-            //     console.log(biceps.workouts[i].name)
-            //     let exercise = document.createElement('div')
-            //     let h4 = document.createElement('h4')
-            //     let = description = document.createElement('p')
-            //     description.textContent = biceps.workouts[i].description
-            //     h4.textContent = biceps.workouts[i].name
-            //     document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            //     exercise.appendChild(description)
-            // }
-            // for (let i in back.workouts) {
-            //     console.log(back.workouts[i].name)
-            //     let exercise = document.createElement('div')
-            //     let h4 = document.createElement('h4')
-            //     let = description = document.createElement('p')
-            //     description.textContent = back.workouts[i].description
-            //     h4.textContent = back.workouts[i].name
-            //     document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            //     exercise.appendChild(description)
-            // }
         } else if (day === 3) {
-            let exercise = document.createElement('div')
-            let h4 = document.createElement('h4')
-            let = description = document.createElement('p')
-            description.textContent = cardio.workouts[0].description
-            h4.textContent = cardio.workouts[0].name
-            document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            exercise.appendChild(description)
-            for (let i in legs.workouts) {
-                console.log(legs.workouts[i].name)
-                let exercise = document.createElement('div')
-                let h4 = document.createElement('h4')
-                let = description = document.createElement('p')
-                description.textContent = legs.workouts[i].description
-                h4.textContent = legs.workouts[i].name
-                document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-                exercise.appendChild(description)
-            }
-            for (let i in core.workouts) {
-                console.log(core.workouts[i].name)
-                let exercise = document.createElement('div')
-                let h4 = document.createElement('h4')
-                let = description = document.createElement('p')
-                description.textContent = core.workouts[i].description
-                h4.textContent = core.workouts[i].name
-                document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-                exercise.appendChild(description)
-            }
+            setupContainerCardio(0)
+            setupContainer(legs)
+            setupContainer(core)
         } else if (day === 4) {
-            let exercise = document.createElement('div')
-            let h4 = document.createElement('h4')
-            let = description = document.createElement('p')
-            description.textContent = cardio.workouts[0].description
-            h4.textContent = cardio.workouts[0].name
-            document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            exercise.appendChild(description)
-            for (let i in shoulders.workouts) {
-                console.log(shoulders.workouts[i].name)
-                let exercise = document.createElement('div')
-                let h4 = document.createElement('h4')
-                let = description = document.createElement('p')
-                description.textContent = shoulders.workouts[i].description
-                h4.textContent = shoulders.workouts[i].name
-                document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-                exercise.appendChild(description)
-            }
-            for (let i in core.workouts) {
-                console.log(core.workouts[i].name)
-                let exercise = document.createElement('div')
-                let h4 = document.createElement('h4')
-                let = description = document.createElement('p')
-                description.textContent = core.workouts[i].description
-                h4.textContent = core.workouts[i].name
-                document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-                exercise.appendChild(description)
-            }
+            setupContainerCardio(0)
+            setupContainer(shoulders)
+            setupContainer(core)
         } else if (day === 5) {
-            let exercise = document.createElement('div')
-            let h4 = document.createElement('h4')
-            let = description = document.createElement('p')
-            description.textContent = cardio.workouts[0].description
-            h4.textContent = cardio.workouts[0].name
-            document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            exercise.appendChild(description)
-            for (let i in plyo.workouts) {
-                console.log(plyo.workouts[i].name)
-                let exercise = document.createElement('div')
-                let h4 = document.createElement('h4')
-                let = description = document.createElement('p')
-                description.textContent = plyo.workouts[i].description
-                h4.textContent = plyo.workouts[i].name
-                document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-                exercise.appendChild(description)
-            }
+            setupContainerCardio(0)
+            setupContainer(plyo)
         } else if (day === 6) {
-            let exercise = document.createElement('div')
-            let h4 = document.createElement('h4')
-            let = description = document.createElement('p')
-            description.textContent = cardio.workouts[1].description
-            h4.textContent = cardio.workouts[1].name
-            document.body.appendChild(workoutContainer).appendChild(exercise).appendChild(h4)
-            exercise.appendChild(description)
+            setupContainerCardio(1)
         }
-        })
+    })
 }
     
 const crossOffWorkout = (event) => {
@@ -173,4 +88,65 @@ const crossOffWorkout = (event) => {
     event.target.parentNode.classList.toggle('checked')
 }
 
+const getTypeWorkout = (e) => {
+    e.preventDefault()
+    document.getElementById('big-container').innerHTML = ""
+    axios.get(`${baseURL}weights/`)
+    .then(res => {
+        let workoutContainer = document.createElement('div')
+        let triceps = res.data[0]
+        let chest = res.data[1]
+        let biceps = res.data[2]
+        let back = res.data[3]
+        let shoulders = res.data[4]
+        let core = res.data[5]
+        let legs = res.data[6]
+        let cardio = res.data[7]
+        let plyo = res.data[8]
+        const setupContainer = (type) => {
+            for (i in type.workouts) {
+                let exercise = document.createElement('div')
+                let h4 = document.createElement('h4')
+                let description = document.createElement('p')
+                document.getElementById('big-container').appendChild(workoutContainer)
+                workoutContainer.appendChild(exercise)
+                exercise.appendChild(h4)
+                exercise.appendChild(description)
+                h4.addEventListener('click',crossOffWorkout)
+                exercise.classList.add("angled-gradient-div")
+                description.textContent = type.workouts[i].description
+                h4.textContent = type.workouts[i].name
+            }
+        }
+        if (e.target.textContent === "Triceps") {
+            setupContainer(triceps)
+        } else if (e.target.textContent === "Biceps"){
+            setupContainer(biceps)
+        } else if (e.target.textContent === "Chest") {
+            setupContainer(chest)
+        } else if (e.target.textContent === "Back"){
+            setupContainer(back)
+        } else if (e.target.textContent === "Legs") {
+            setupContainer(legs)
+        } else if (e.target.textContent === "Core"){
+            setupContainer(core)
+        } else if (e.target.textContent === "Shoulders") {
+            setupContainer(shoulders)
+        } else if (e.target.textContent === "Cardio"){
+            setupContainer(cardio)
+        } else if (e.target.textContent === "Plyo") {
+            setupContainer(plyo)
+        }
+})}
+
+
 todayBtn.addEventListener('click',getWorkout)
+tricepBtn.addEventListener('click',getTypeWorkout)
+bicepBtn.addEventListener('click',getTypeWorkout)
+chestBtn.addEventListener('click',getTypeWorkout)
+plyoBtn.addEventListener('click',getTypeWorkout)
+backBtn.addEventListener('click',getTypeWorkout)
+legsBtn.addEventListener('click',getTypeWorkout)
+coreBtn.addEventListener('click',getTypeWorkout)
+shouldersBtn.addEventListener('click',getTypeWorkout)
+cardioBtn.addEventListener('click',getTypeWorkout)

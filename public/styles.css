@@ -1,10 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+#type-buttons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+button {
+    width: 50%;
+    margin: 5em auto 1em auto;
+    text-align: center;
+    padding: 2em;
+}
+
+.type {
+    margin: 1em .25em;
+}
 
 h4 {
     color: black;
+    text-transform: uppercase;
+}
+
+.angled-gradient-button {
+    background-size: 220%;
+    box-shadow: 0 .2em .3em rgba(0, 0, 0, 0.15);
+    color: red;
+    background-color: transparent;
+    background-position: 100%;
+    border: 3px solid red;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 3px;
+    transition: all .2s ease-out;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-image: linear-gradient(110deg, red 0%, red 50%, transparent 50%, transparent 100%);
+    font-size: 14px;
+}
+
+.angled-gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, 0.25);
+    background-position: 0;
+    color: #fff;
+}
+
+.angled-gradient-button:active {
+    transform: translateY(-1px);
+}
+
+.angled-gradient-div {
+    background-size: 220%;
+    box-shadow: 0 .2em .3em rgba(0, 0, 0, 0.15);
+    color: black;
+    background-color: transparent;
+    background-position: 100%;
+    border: 3px solid red;
+    padding: 8px 16px;
+    border-radius: 3px;
+    transition: all .2s ease-out;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-image: linear-gradient(110deg, red 0%, red 50%, transparent 50%, transparent 100%);
+    font-size: 14px;
+    width: 70%;
+    margin: 1em auto;
 }
 
 .checked {
     background-color: gray;
     color: lightgray;
     text-decoration: line-through;
+    border-color: gray;
 }

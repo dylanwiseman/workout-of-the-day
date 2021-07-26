@@ -6,11 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,900&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
-        <button id="todaysWorkout">Today's Workout</button>
+    <form id="buttonContainer">
+        <button id="todaysWorkout" class="angled-gradient-button">Today's Workout</button>
     </form>
+
+<div id="type-buttons">
+        <button id="triceps-button" class="angled-gradient-button type">Triceps</button>
+        <button id="biceps-button" class="angled-gradient-button type">Biceps</button>
+        <button id="chest-button" class="angled-gradient-button type">Chest</button>
+        <button id="back-button" class="angled-gradient-button type">Back</button>
+        <button id="legs-button" class="angled-gradient-button type">Legs</button>
+        <button id="core-button" class="angled-gradient-button type">Core</button>
+        <button id="shoulders-button" class="angled-gradient-button type">Shoulders</button>
+        <button id="cardio-button" class="angled-gradient-button type">Cardio</button>
+        <button id="plyo-button" class="angled-gradient-button type">Plyo</button>
+</div>
+<div id="big-container">
+</div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="index.js"></script>

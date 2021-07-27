@@ -38,7 +38,7 @@ h4 {
 
 .angled-gradient-button {
   background-size: 220%;
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.8em 0.9em rgba(0, 0, 0, 0.5);
   color: red;
   background-color: transparent;
   background-position: 100%;
@@ -73,7 +73,7 @@ h4 {
 
 .angled-gradient-div {
   background-size: 220%;
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.8em 0.9em rgba(0, 0, 0, 0.5);
   color: black;
   background-color: transparent;
   background-position: 100%;
@@ -96,9 +96,32 @@ h4 {
   margin: 1em auto;
 }
 
+.gold {
+  border-color: black;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+}
+
 .checked {
+  background: transparent;
   background-color: gray;
   color: lightgray;
   text-decoration: line-through;
   border-color: gray;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.25);
 }

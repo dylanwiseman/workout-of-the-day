@@ -58,7 +58,7 @@
       },
       {
         "id": 3,
-        "name": "seated lean-back curl",
+        "name": "seated decline curl",
         "description": "Sit back on an incline bench, let your arms hang straight down at the bottom of each curl. 3 sets."
       },
       {
@@ -125,7 +125,7 @@
       },
       {
         "id": 3,
-        "name": "shoulder flys",
+        "name": "complex shoulder flys",
         "description": "Use light weights. ELbows at 45 degrees, hold like ski-poles, then do chicken wings, then hands in the air, then elbows together. Reverse. 3 sets."
       },
       {
@@ -257,6 +257,7 @@
         "id": 1,
         "name": "rest day",
         "description": "It's a rest day. Take time to recover."
-      }]
+      }
+    ]
   }
 ]

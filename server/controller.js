@@ -1,8 +1,8 @@
-const weights = require("./db.json");
-console.log(weights);
+const workouts = require("./db.json");
+
 //Functions to export:
 module.exports = {
-  getWeights: (req, res) => {
-    res.status(200).send(weights);
+  getWorkouts: (req, res) => {
+    res.status(200).send(workouts);
   },
 };

@@ -9,12 +9,13 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
 
+//For Heroku:
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"));
   });
 
 //Requests:
-app.get("/api/weights/", ctrl.getWeights);
+app.get("/api/workouts/", ctrl.getWorkouts);
 
 //Server setup:
 const port = process.env.PORT || 4005;

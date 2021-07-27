@@ -1,4 +1,6 @@
 const baseURL = "http://localhost:4005/api/";
+
+//Selecting the buttons:
 const todayBtn = document.getElementById("todaysWorkout");
 const tricepBtn = document.getElementById("triceps-button");
 const bicepBtn = document.getElementById("biceps-button");
@@ -10,10 +12,11 @@ const shouldersBtn = document.getElementById("shoulders-button");
 const cardioBtn = document.getElementById("cardio-button");
 const plyoBtn = document.getElementById("plyo-button");
 
+//Get's Today's Workout:
 const getWorkout = (e) => {
   e.preventDefault();
   document.getElementById("big-container").innerHTML = "";
-  axios.get(`${baseURL}weights/`).then((res) => {
+  axios.get(`${baseURL}workouts/`).then((res) => {
     let workoutContainer = document.createElement("div");
     let triceps = res.data[0];
     let chest = res.data[1];
@@ -27,6 +30,7 @@ const getWorkout = (e) => {
     let rest = res.data[9];
     let date = new Date();
     let day = date.getDay();
+    //Function to create & arrange containers for cardio exercises:
     const setupContainerCardio = (num) => {
       let exercise = document.createElement("div");
       let h4 = document.createElement("h4");
@@ -40,6 +44,7 @@ const getWorkout = (e) => {
       description.textContent = cardio.workouts[num].description;
       h4.textContent = cardio.workouts[num].name;
     };
+    //Function to create & arrange containers for all other exercises:
     const setupContainer = (type) => {
       for (i in type.workouts) {
         let exercise = document.createElement("div");
@@ -53,10 +58,19 @@ const getWorkout = (e) => {
         exercise.classList.add("angled-gradient-div");
         description.textContent = type.workouts[i].description;
         h4.textContent = type.workouts[i].name;
+        //Identifies special workouts:
+        if (
+          type.workouts[i].name === "the crucifix" ||
+          type.workouts[i].name === "triple threat" ||
+          type.workouts[i].name === "complex shoulder flys"
+        ) {
+          exercise.classList.add("gold");
+        }
       }
     };
+    //Builds exercise containers based on the day:
     if (day === 0) {
-        setupContainer(rest);
+      setupContainer(rest);
     } else if (day === 1) {
       setupContainerCardio(0);
       setupContainer(triceps);
@@ -82,14 +96,16 @@ const getWorkout = (e) => {
   });
 };
 
+//Crosses off completed workouts when clicked:
 const crossOffWorkout = (event) => {
   event.target.parentNode.classList.toggle("checked");
 };
 
+//Gets workouts by type:
 const getTypeWorkout = (e) => {
   e.preventDefault();
   document.getElementById("big-container").innerHTML = "";
-  axios.get(`${baseURL}weights/`).then((res) => {
+  axios.get(`${baseURL}workouts/`).then((res) => {
     let workoutContainer = document.createElement("div");
     let triceps = res.data[0];
     let chest = res.data[1];
@@ -113,6 +129,13 @@ const getTypeWorkout = (e) => {
         exercise.classList.add("angled-gradient-div");
         description.textContent = type.workouts[i].description;
         h4.textContent = type.workouts[i].name;
+        if (
+          type.workouts[i].name === "the crucifix" ||
+          type.workouts[i].name === "triple threat" ||
+          type.workouts[i].name === "complex shoulder flys"
+        ) {
+          exercise.classList.add("gold");
+        }
       }
     };
     if (e.target.textContent === "Triceps") {
@@ -137,6 +160,7 @@ const getTypeWorkout = (e) => {
   });
 };
 
+//Event Listeners:
 todayBtn.addEventListener("click", getWorkout);
 tricepBtn.addEventListener("click", getTypeWorkout);
 bicepBtn.addEventListener("click", getTypeWorkout);

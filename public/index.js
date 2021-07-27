@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:4005/api/";
+const baseURL = "/api/";
 
 //Selecting the buttons:
 const todayBtn = document.getElementById("todaysWorkout");

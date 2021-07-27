@@ -12,7 +12,6 @@ const plyoBtn = document.getElementById("plyo-button");
 
 const getWorkout = (e) => {
   e.preventDefault();
-  console.log("clicked!");
   document.getElementById("big-container").innerHTML = "";
   axios.get(`${baseURL}weights/`).then((res) => {
     let workoutContainer = document.createElement("div");
@@ -25,6 +24,7 @@ const getWorkout = (e) => {
     let legs = res.data[6];
     let cardio = res.data[7];
     let plyo = res.data[8];
+    let rest = res.data[9];
     let date = new Date();
     let day = date.getDay();
     const setupContainerCardio = (num) => {
@@ -56,7 +56,7 @@ const getWorkout = (e) => {
       }
     };
     if (day === 0) {
-      console.log("rest day");
+        setupContainer(rest);
     } else if (day === 1) {
       setupContainerCardio(0);
       setupContainer(triceps);
@@ -83,7 +83,6 @@ const getWorkout = (e) => {
 };
 
 const crossOffWorkout = (event) => {
-  console.log("crossoff");
   event.target.parentNode.classList.toggle("checked");
 };
 

@@ -12,7 +12,7 @@ const shouldersBtn = document.getElementById("shoulders-button");
 const cardioBtn = document.getElementById("cardio-button");
 const plyoBtn = document.getElementById("plyo-button");
 
-//Get's Today's Workout:
+//Gets Today's Workout:
 const getWorkout = (e) => {
   e.preventDefault();
   document.getElementById("big-container").innerHTML = "";
